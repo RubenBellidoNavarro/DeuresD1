@@ -62,7 +62,7 @@ def app_run():
     # TODO Actualiza los radios de los globos de la lista (la lista debe tener al menos 1 globo)
     if len(array_globos) >= 1:
         for globo in array_globos:
-            if globo['radius'] >= 5:
+            if globo['radius'] - delta_radius > 5:
                 globo['radius'] -= delta_radius
             else:
                 globo['radius'] = 5
